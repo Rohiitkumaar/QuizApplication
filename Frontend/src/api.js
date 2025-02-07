@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/quiz"; 
+const API_URL = "https://quizapplication-xfud.onrender.com/api/quiz"; 
 const fetchQuizData = async () => {
   try {
     const response = await axios.get(API_URL);

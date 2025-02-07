@@ -73,27 +73,28 @@ const QuizComponent = () => {
   const progress = ((currentQuestionIndex ) / questions.length) * 100;
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-indigo-500">
+    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-indigo-500 px-4">
       <div className="fixed top-0 left-0 w-full bg-gray-200 h-3 shadow-inner z-50">
         <div
           className="bg-blue-600 h-3 transition-all duration-300 ease-in-out"
           style={{ width: `${progress}%` }}
         />
       </div>
-      <div className="absolute top-6 right-6 bg-white text-gray-800 px-6 py-3 rounded-full shadow-lg text-lg font-semibold">
+
+      <div className="absolute top-4 right-4 md:top-6 md:right-6 bg-white text-gray-800 px-4 py-2 md:px-6 md:py-3 rounded-full shadow-lg text-sm md:text-lg font-semibold">
         Score: {score}
       </div>
 
-      <div className="bg-white p-8 rounded-2xl shadow-2xl w-[80%] max-w-xl mt-8">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">
+      <div className="bg-white p-6 md:p-8 rounded-2xl shadow-2xl w-full max-w-xl mt-8">
+        <h2 className="text-lg md:text-xl font-bold text-gray-800 mb-4 md:mb-6 text-center">
           {currentQuestion.description}
         </h2>
 
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col space-y-3 md:space-y-4">
           {currentQuestion.options.map((option) => (
             <button
               key={option.id}
-              className={`py-3 px-5 rounded-lg transition-all duration-300 shadow-lg text-lg font-medium ${
+              className={`py-2 px-4 md:py-3 md:px-5 rounded-lg transition-all duration-300 shadow-lg text-base md:text-lg font-medium ${
                 selectedOption === option.id
                   ? correctAnswer
                     ? "bg-green-500 text-white"
