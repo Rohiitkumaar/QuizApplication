@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import StartPage from "./components/StartPAge";
+import StartPage from "./components/StartPage";
 import QuizComponent from "./components/QuizComponent";
 
 function App() {

@@ -1,27 +1,22 @@
-
 import { useNavigate } from "react-router-dom";
 
 const StartPage = () => {
   const navigate = useNavigate();
 
-  const startQuiz = () => {
-    navigate("/quiz");
-  };
-
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-400 via-blue-200 to-purple-300 px-4">
-      <div className="text-center max-w-[90%] md:max-w-2xl">
-        <h1 className="text-2xl md:text-4xl sm:text-center font-extrabold text-gray-900 mb-4 animate-pulse">
-          Welcome to the Ultimate Quiz!
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-400 via-blue-200 to-purple-300 px-6">
+      <div className="text-center w-full max-w-2xl space-y-6">
+        <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 animate-pulse">
+          Welcome to the Ultimate Quiz! 🎉
         </h1>
-        <p className="text-lg md:text-xl text-gray-700 mb-8 italic font-medium">
+        <p className="text-lg md:text-2xl text-gray-700 font-medium italic">
           Your moment of glory awaits! Take the quiz and prove your brilliance!
         </p>
         <button
-          onClick={startQuiz}
-          className="bg-purple-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-lg md:text-xl font-bold shadow-lg hover:bg-purple-800 transition-transform transform hover:scale-110 duration-300"
+          onClick={() => navigate("/quiz")}
+          className="bg-purple-600 text-white px-6 py-3 md:px-10 md:py-4 rounded-xl text-lg md:text-2xl font-semibold shadow-md hover:bg-purple-700 transition-all transform hover:scale-105 hover:shadow-xl duration-300"
         >
-          Start Quiz
+          🚀 Start Quiz
         </button>
       </div>
     </div>
